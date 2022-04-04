@@ -77,14 +77,7 @@ class Solver:
             return False
         else:
             return True
-    
-    #fungsi untuk mengecek apakah sudah dalam bentuk akhir
-    def isFinal(self):
-        if(self.cost(self.matriks) != 16):
-            return False
-        else:
-            return True
-
+        
     #fungsi untuk menghitung nilai "Kurang" dari puzzle
     def hitungInversi(self):
         matriks = []

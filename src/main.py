@@ -29,7 +29,7 @@ while(x):
             print("Puzzle bisa diselesaikan")
             temp = copy.deepcopy(puzzle)
             puzzle.simpul[tuple(puzzle.convert(puzzle.matriks))] = 'none'
-            while (not puzzle.isFinal()) :
+            while (not puzzle.cost(puzzle.matriks) == 16):
                 puzzle.BnB()
             temp.langkah = puzzle.langkah.split(" ")
             while (len(temp.langkah) != 1) :
@@ -59,7 +59,7 @@ while(x):
             print("Puzzle bisa diselesaikan")
             temp = copy.deepcopy(puzzle)
             puzzle.simpul[tuple(puzzle.convert(puzzle.matriks))] = 'none'
-            while (not puzzle.isFinal()) :
+            while (not puzzle.cost(puzzle.matriks) == 16) :
                 puzzle.BnB()
             temp.langkah = puzzle.langkah.split(" ")
             while (len(temp.langkah) != 1) :
