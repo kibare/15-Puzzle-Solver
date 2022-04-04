@@ -94,13 +94,13 @@ class Solver:
         total = 0
         for i in range(16):
             inversi = 0
-            for j in range(i,16):
+            for j in range(i+1,16):
                 if(matriks[j] < matriks[i]):
                     total += 1
                     inversi += 1
-            self.kurang.append([i+1,inversi])
+            self.kurang.append([matriks[i],inversi])
         inversi = self.kurang
-        inversi.sort(key=lambda x: x[1])
+        inversi.sort(key=lambda x: x[0])
         return total
     
     # fungsi untuk menampilkan nilai kurang pada setiap ubin
